@@ -54,7 +54,7 @@ class SSIPLExcelImport(Document):
 
 	def create_item_subgroups(self, i, sheet):
 
-		item_sub_group_name = sheet.cell_value(i, 14) + ' - ' + sheet.cell_value(i, 13)
+		item_sub_group_name = sheet.cell_value(i, 14) # + ' - ' + sheet.cell_value(i, 13)
 		item_parent_group_name = sheet.cell_value(i, 13)
 		if not frappe.db.exists('Item Group', item_sub_group_name):
 
