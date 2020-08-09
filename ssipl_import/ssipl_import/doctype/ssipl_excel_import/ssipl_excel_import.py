@@ -303,7 +303,7 @@ class SSIPLExcelImport(Document):
 				item_name = sheet.cell_value(i, 3)
 				retail_price = sheet.cell_value(i, 8)
 				qty = float(sheet.cell_value(i, 7))
-				basic_rate = sheet.cell_value(i, 5)
+				basic_rate = sheet.cell_value(i, 8)
 				basic_amount = float(retail_price) * float(sheet.cell_value(i, 7))
 
 				items.append({
