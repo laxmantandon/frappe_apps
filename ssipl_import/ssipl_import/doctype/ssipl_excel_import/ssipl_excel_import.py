@@ -9,7 +9,7 @@ import datetime
 from frappe.model.document import Document
 
 class SSIPLExcelImport(Document):
-	
+
 	def start_import(self):
 
 		excel_file = frappe.local.site_path + self.excel_file
@@ -350,3 +350,109 @@ class SSIPLExcelImport(Document):
 			stock_entry.insert()
 			stock_entry.submit()
 			self.stock_entry = stock_entry.name
+
+
+	def start_import_2(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_2	
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+
+		self.import_items_2()
+		
+	def import_items_2(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_2
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+		
+		for i in range(sheet.nrows):
+			if i > 0:
+				self.create_item_groups(i, sheet)
+				self.create_item_subgroups(i, sheet)
+				self.create_suppliers(i, sheet)
+				self.create_brands(i, sheet)
+				self.create_items(i, sheet)
+				self.create_price_lists(i, sheet)
+		
+		self.create_stock_entry(sheet)
+		frappe.msgprint("File Processed Successfully")
+
+	def start_import_3(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_3	
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+
+		self.import_items_3()
+		
+	def import_items_3(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_3
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+		
+		for i in range(sheet.nrows):
+			if i > 0:
+				self.create_item_groups(i, sheet)
+				self.create_item_subgroups(i, sheet)
+				self.create_suppliers(i, sheet)
+				self.create_brands(i, sheet)
+				self.create_items(i, sheet)
+				self.create_price_lists(i, sheet)
+		
+		self.create_stock_entry(sheet)
+		frappe.msgprint("File Processed Successfully")
+
+	def start_import_4(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_4	
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+
+		self.import_items_4()
+		
+	def import_items_4(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_4
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+		
+		for i in range(sheet.nrows):
+			if i > 0:
+				self.create_item_groups(i, sheet)
+				self.create_item_subgroups(i, sheet)
+				self.create_suppliers(i, sheet)
+				self.create_brands(i, sheet)
+				self.create_items(i, sheet)
+				self.create_price_lists(i, sheet)
+		
+		self.create_stock_entry(sheet)
+		frappe.msgprint("File Processed Successfully")
+
+	def start_import_5(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_5	
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+
+		self.import_items_5()
+		
+	def import_items_5(self):
+
+		excel_file = frappe.local.site_path + self.excel_file_5
+		wb = xlrd.open_workbook(excel_file)
+		sheet = wb.sheet_by_index(0)
+		
+		for i in range(sheet.nrows):
+			if i > 0:
+				self.create_item_groups(i, sheet)
+				self.create_item_subgroups(i, sheet)
+				self.create_suppliers(i, sheet)
+				self.create_brands(i, sheet)
+				self.create_items(i, sheet)
+				self.create_price_lists(i, sheet)
+		
+		self.create_stock_entry(sheet)
+		frappe.msgprint("File Processed Successfully")
+
