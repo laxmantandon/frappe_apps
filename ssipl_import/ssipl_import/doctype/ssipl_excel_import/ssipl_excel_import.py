@@ -301,9 +301,10 @@ class SSIPLExcelImport(Document):
 				item_code = sheet.cell_value(i, 2)
 				item_group = sheet.cell_value(i, 14)
 				item_name = sheet.cell_value(i, 3)
+				retail_price = sheet.cell_value(i, 8)
 				qty = float(sheet.cell_value(i, 7))
 				basic_rate = sheet.cell_value(i, 5)
-				basic_amount = float(sheet.cell_value(i, 5)) * float(sheet.cell_value(i, 7))
+				basic_amount = float(retail_price) * float(sheet.cell_value(i, 7))
 
 				items.append({
 					"parentfield": "items",
