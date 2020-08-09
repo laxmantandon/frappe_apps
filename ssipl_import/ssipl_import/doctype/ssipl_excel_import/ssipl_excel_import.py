@@ -106,6 +106,10 @@ class SSIPLExcelImport(Document):
 		standard_rate = sheet.cell_value(i, 8)
 		brand = sheet.cell_value(i, 23)
 		supplier = sheet.cell_value(i, 4)
+		category_type = sheet.cell_value(i, 21)
+		design_name = sheet.cell_value(i, 24)
+		size_name = sheet.cell_value(i, 31)
+		color_name = sheet.cell_value(i, 32)
 		gst_local = self.get_local_tax_template(sheet.cell_value(i, 34))
 		gst_interstate = self.get_interstate_tax_template(sheet.cell_value(i, 34))
 
@@ -117,6 +121,10 @@ class SSIPLExcelImport(Document):
 					"item_code": item_name,
 					"item_name": item_desc,
 					"item_group": item_group,
+					"category_type": category_type,
+					"design_name": design_name,
+					"size_name": size_name,
+					"color_name": color_name,
 					"gst_hsn_code": gst_hsn_code,
 					"stock_uom":"Nos",
 					"is_stock_item":1,
