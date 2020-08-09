@@ -302,7 +302,7 @@ class SSIPLExcelImport(Document):
 					"parenttype": "Stock Entry",
 					"t_warehouse": self.warehouse,
 					"item_code": item_code,
-					"item_group": "U G - Group",
+					"item_group": item_group,
 					"item_name": item_name,
 					"description": item_name,
 					"qty": qty,
@@ -314,8 +314,8 @@ class SSIPLExcelImport(Document):
 					"conversion_factor": 1,
 					"stock_uom": "Nos",
 					"transfer_qty": qty,
-					"expense_account": "Stock Adjustment - TC",
-					"cost_center": "Main - TC",
+					# "expense_account": "Stock Adjustment - TC",
+					# "cost_center": "Main - TC",
 					"doctype": "Stock Entry Detail"
 				})
 				
