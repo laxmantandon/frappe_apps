@@ -38,16 +38,16 @@ class SSIPLExcelImport(Document):
 
 	def start_import_2(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_2	
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_2 = frappe.local.site_path + self.excel_file_2	
+		wb = xlrd.open_workbook(excel_file_2)
 		sheet = wb.sheet_by_index(0)
 
 		self.import_items_2()
 		
 	def import_items_2(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_2
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_2 = frappe.local.site_path + self.excel_file_2
+		wb = xlrd.open_workbook(excel_file_2)
 		sheet = wb.sheet_by_index(0)
 		
 		for i in range(sheet.nrows):
@@ -64,16 +64,16 @@ class SSIPLExcelImport(Document):
 
 	def start_import_3(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_3	
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_3 = frappe.local.site_path + self.excel_file_3	
+		wb = xlrd.open_workbook(excel_file_3)
 		sheet = wb.sheet_by_index(0)
 
 		self.import_items_3()
 		
 	def import_items_3(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_3
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_3 = frappe.local.site_path + self.excel_file_3
+		wb = xlrd.open_workbook(excel_file_3)
 		sheet = wb.sheet_by_index(0)
 		
 		for i in range(sheet.nrows):
@@ -90,16 +90,16 @@ class SSIPLExcelImport(Document):
 
 	def start_import_4(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_4	
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_ = frappe.local.site_path + self.excel_file_4	
+		wb = xlrd.open_workbook(excel_file_4)
 		sheet = wb.sheet_by_index(0)
 
 		self.import_items_4()
 		
 	def import_items_4(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_4
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_4 = frappe.local.site_path + self.excel_file_4
+		wb = xlrd.open_workbook(excel_file_4)
 		sheet = wb.sheet_by_index(0)
 		
 		for i in range(sheet.nrows):
@@ -116,16 +116,16 @@ class SSIPLExcelImport(Document):
 
 	def start_import_5(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_5	
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_5 = frappe.local.site_path + self.excel_file_5	
+		wb = xlrd.open_workbook(excel_file_5)
 		sheet = wb.sheet_by_index(0)
 
 		self.import_items_5()
 		
 	def import_items_5(self):
 
-		excel_file = frappe.local.site_path + self.excel_file_5
-		wb = xlrd.open_workbook(excel_file)
+		excel_file_5 = frappe.local.site_path + self.excel_file_5
+		wb = xlrd.open_workbook(excel_file_5)
 		sheet = wb.sheet_by_index(0)
 		
 		for i in range(sheet.nrows):
