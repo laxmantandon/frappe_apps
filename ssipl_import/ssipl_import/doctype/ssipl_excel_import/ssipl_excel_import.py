@@ -214,6 +214,7 @@ class SSIPLExcelImport(Document):
 		design_name = sheet.cell_value(i, 24)
 		size_name = sheet.cell_value(i, 31)
 		color_name = sheet.cell_value(i, 32)
+		uom = 'Nos' if sheet.cell_value(i, 35) == "Pcs" else sheet.cell_value(i, 35)
 		gst_local = self.get_local_tax_template(sheet.cell_value(i, 34))
 		gst_interstate = self.get_interstate_tax_template(sheet.cell_value(i, 34))
 
@@ -230,7 +231,7 @@ class SSIPLExcelImport(Document):
 					"size_name": size_name,
 					"color_name": color_name,
 					"gst_hsn_code": gst_hsn_code,
-					"stock_uom":"Nos",
+					"stock_uom":uom,
 					"is_stock_item":1,
 					"include_item_in_manufacturing":1,
 					"valuation_rate": item_valuation,
@@ -263,7 +264,7 @@ class SSIPLExcelImport(Document):
 							"parent": item_name,
 							"parentfield":"uoms",
 							"parenttype":"Item",
-							"uom":"Nos",
+							"uom":uom,
 							"conversion_factor":1,
 							"doctype":"UOM Conversion Detail"
 						}
@@ -406,6 +407,7 @@ class SSIPLExcelImport(Document):
 				item_group = sheet.cell_value(i, 14)
 				item_name = sheet.cell_value(i, 3)
 				retail_price = sheet.cell_value(i, 8)
+				uom = 'Nos' if sheet.cell_value(i, 35) == "Pcs" else sheet.cell_value(i, 35)
 				qty = float(sheet.cell_value(i, 7))
 				basic_rate = sheet.cell_value(i, 8)
 				basic_amount = float(retail_price) * float(sheet.cell_value(i, 7))
@@ -423,9 +425,9 @@ class SSIPLExcelImport(Document):
 					"basic_amount": basic_amount,
 					"amount": basic_amount,
 					"valuation_rate": basic_rate,
-					"uom": "Nos",
+					"uom": uom,
 					"conversion_factor": 1,
-					"stock_uom": "Nos",
+					"stock_uom": uom,
 					"transfer_qty": qty,
 					# "expense_account": "Stock Adjustment - TC",
 					# "cost_center": "Main - TC",
