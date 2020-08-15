@@ -91,6 +91,12 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+    "POS Invoice": {
+        "autoname": "ssipl_import.daily_document_number.set_auto_number"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
