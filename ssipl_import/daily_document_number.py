@@ -12,4 +12,4 @@ from frappe.utils import date_diff
 def set_auto_number(doc, method):
     start_date = frappe.defaults.get_user_default("year_start_date")
     dayofyear = date_diff(doc.posting_date, start_date)
-    doc.name = make_autoname(doc.naming_series + '-.' + str(dayofyear) + '.-' + '.#####')
+    doc.name = make_autoname(doc.naming_series + '/.' + str(dayofyear) + './' + '.###')
